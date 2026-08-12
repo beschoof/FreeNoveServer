@@ -18,26 +18,26 @@ def test_Led():
         print ("\nEnd of program")
       
 from Motor import *            
-Motor=Motor()          
+motor=Motor()          
 
 def test_Motor(): 
     try:
-        Motor.setMotorModel(2000,2000)        #Forward
+        motor.setMotorModel(2000,2000)        #Forward
         print ("The car is moving forward")
         time.sleep(1)
-        Motor.setMotorModel(-2000,-2000)      #Back
+        motor.setMotorModel(-2000,-2000)      #Back
         print ("The car is going backwards")
         time.sleep(1)
-        Motor.setMotorModel(-2000,2000)       #Left 
+        motor.setMotorModel(-2000,2000)       #Left 
         print ("The car is turning left")
         time.sleep(1)
-        Motor.setMotorModel(2000,-2000)       #Right 
+        motor.setMotorModel(2000,-2000)       #Right 
         print ("The car is turning right")  
         time.sleep(1)
-        Motor.setMotorModel(0,0)              #Stop
+        motor.setMotorModel(0,0)              #Stop
         print ("\nEnd of program")
     except KeyboardInterrupt:
-        Motor.setMotorModel(0,0)              #Stop
+        motor.setMotorModel(0,0)              #Stop
         print ("\nEnd of program")
 
 from Ultrasonic import *
